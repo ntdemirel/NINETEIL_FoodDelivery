@@ -237,14 +237,14 @@
                                 <color key="textColor" red="0.035294117647058823" green="0.019607843137254902" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jV1-5Y-7uG">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jV1-5Y-7uG">
                                 <rect key="frame" x="25" y="425.33333333333331" width="325" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="dVe-sO-gUD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="15"/>
@@ -254,14 +254,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVo-5N-suu">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVo-5N-suu">
                                 <rect key="frame" x="25" y="494.33333333333326" width="325" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="vHg-Xh-42b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="15"/>
@@ -326,6 +326,9 @@
                                             <fontDescription key="titleFontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                             <color key="baseForegroundColor" red="0.035294117647058823" green="0.019607843137254902" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="googleSignInButtonTapped:" destination="GO9-vL-rgH" eventType="touchUpInside" id="suF-xr-eea"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="GoogleIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hOe-iO-PWU">
                                         <rect key="frame" x="22" y="16" width="24.666666666666671" height="25"/>
@@ -394,6 +397,9 @@
                     <connections>
                         <outlet property="brandNameLabel" destination="0n6-a2-rRv" id="Qvm-HN-i4V"/>
                         <outlet property="emailTextField" destination="jV1-5Y-7uG" id="Mtd-bS-hd7"/>
+                        <outlet property="facebookSignInView" destination="W4b-lt-etv" id="t7w-Oz-Jaq"/>
+                        <outlet property="googleSignInButton" destination="h98-jd-7ya" id="U0W-Oa-tdh"/>
+                        <outlet property="googleSignInView" destination="8WH-bZ-Lpf" id="UEo-P3-3E5"/>
                         <outlet property="loginButton" destination="RbA-sG-JOp" id="22j-P2-xg0"/>
                         <outlet property="passwordForgotLabel" destination="PdI-RW-Nvu" id="Mpp-l6-N3F"/>
                         <outlet property="passwordTextField" destination="KVo-5N-suu" id="tf6-1F-ATQ"/>
@@ -418,10 +424,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvj-6L-nFL">
                                         <rect key="frame" x="0.0" y="0.0" width="325" height="57"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="              Anamwp . . |" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAm-4n-CAT">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Anamwp . . |" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAm-4n-CAT">
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="57"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="M9S-gs-3lR">
                                                 <rect key="frame" x="20" y="17" width="24" height="24"/>
@@ -441,10 +447,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hK5-0O-bVz">
                                         <rect key="frame" x="0.0" y="69" width="325" height="57"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="              Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWe-Lv-6dC">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWe-Lv-6dC">
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="57"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="MailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IU8-Ub-Tki">
                                                 <rect key="frame" x="20" y="17" width="24" height="24"/>
@@ -464,10 +470,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-9F-GoP">
                                         <rect key="frame" x="0.0" y="138" width="325" height="57"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="             Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5g-jZ-8yz">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5g-jZ-8yz">
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="nZJ-wq-qE1">
                                                 <rect key="frame" x="20" y="17" width="24" height="24"/>
@@ -620,9 +626,12 @@
                         <outlet property="createAccountButton" destination="gDe-k0-JcF" id="hTU-jG-pJy"/>
                         <outlet property="emailPricingCheckboxButton" destination="b78-ef-Mjg" id="Rfz-QH-hKB"/>
                         <outlet property="emailTextField" destination="AWe-Lv-6dC" id="Tce-S7-jJ6"/>
+                        <outlet property="emailTextFieldView" destination="hK5-0O-bVz" id="fMX-ci-XRb"/>
                         <outlet property="keepMeSignedInCheckboxButton" destination="90K-zd-0aA" id="94q-06-2jd"/>
                         <outlet property="passwordTextField" destination="b5g-jZ-8yz" id="MWS-5R-AKC"/>
+                        <outlet property="passwordTextFieldView" destination="wlA-9F-GoP" id="zLQ-lU-dss"/>
                         <outlet property="usernameTextField" destination="yAm-4n-CAT" id="gZ1-74-6hd"/>
+                        <outlet property="usernameTextFieldView" destination="pvj-6L-nFL" id="Bzi-ig-pka"/>
                         <segue destination="XWf-ob-u69" kind="presentation" identifier="showSignUpProcessScreen" modalPresentationStyle="fullScreen" id="eLL-aG-X2a"/>
                     </connections>
                 </viewController>
@@ -641,33 +650,33 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I6Z-XR-kEQ">
                                 <rect key="frame" x="14" y="290.33333333333331" width="347" height="223.66666666666669"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBm-e8-S5Z">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBm-e8-S5Z">
                                         <rect key="frame" x="0.0" y="0.0" width="347" height="61.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="22"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-Fi-5wf">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-Fi-5wf">
                                         <rect key="frame" x="0.0" y="81.333333333333371" width="347" height="61"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" textContentType="family-name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="22"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yG9-Kf-iGn">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yG9-Kf-iGn">
                                         <rect key="frame" x="0.0" y="162.33333333333337" width="347" height="61.333333333333343"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="22"/>
@@ -1077,7 +1086,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="bLK-Ms-sdC" kind="presentation" modalPresentationStyle="fullScreen" id="3wj-zQ-ziW"/>
+                                    <segue destination="bLK-Ms-sdC" kind="show" id="RFa-IS-Onb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1112,7 +1121,7 @@
             <objects>
                 <viewController id="bLK-Ms-sdC" customClass="SetLocationViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PQO-n8-cyG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5O-IR-DeI">
@@ -1137,7 +1146,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="si8-9q-F12">
-                                <rect key="frame" x="17" y="257.33333333333331" width="342" height="147"/>
+                                <rect key="frame" x="17" y="257.33333333333331" width="342" height="124"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="PinIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5pR-Oe-04b">
                                         <rect key="frame" x="11" y="20" width="33" height="33"/>
@@ -1149,7 +1158,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEg-wJ-g9H">
-                                        <rect key="frame" x="10" y="80" width="322" height="57"/>
+                                        <rect key="frame" x="10" y="57" width="322" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="MYj-TB-kQm"/>
                                         </constraints>
@@ -1175,7 +1184,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41M-AN-4qN">
-                                <rect key="frame" x="109" y="691" width="157" height="57"/>
+                                <rect key="frame" x="109" y="668" width="157" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="0gd-0D-fUK"/>
                                 </constraints>
@@ -1185,7 +1194,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="HlW-39-W8Z" kind="presentation" modalPresentationStyle="fullScreen" id="Cqh-mq-16E"/>
+                                    <segue destination="HlW-39-W8Z" kind="show" id="Cqh-mq-16E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1212,6 +1221,7 @@
                     <navigationItem key="navigationItem" id="HEJ-gf-Tac"/>
                     <connections>
                         <outlet property="locationView" destination="si8-9q-F12" id="e5h-ns-iWb"/>
+                        <outlet property="nextButton" destination="41M-AN-4qN" id="oCa-DB-8dS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQd-1h-O7X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1285,7 +1295,7 @@
             <objects>
                 <viewController id="HlW-39-W8Z" customClass="VerificationViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="okF-IO-PtL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKG-Ng-h5B">
@@ -1297,7 +1307,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="BackIcon"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A9-FY-Lzn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A9-FY-Lzn">
                                 <rect key="frame" x="25" y="150" width="207" height="65.666666666666686"/>
                                 <string key="text">Enter 4-digit
 Verification code</string>
@@ -1305,35 +1315,35 @@ Verification code</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code send to +6282045**** . This code will expired in 01:30" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKe-MB-UKF">
-                                <rect key="frame" x="25" y="234.66666666666666" width="239" height="32.999999999999972"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Code send to +6282045**** . This code will expired in 01:30" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKe-MB-UKF">
+                                <rect key="frame" x="25" y="234.66666666666663" width="239" height="33"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-FB-GnQ">
-                                <rect key="frame" x="14" y="305.66666666666669" width="347" height="111.33333333333331"/>
+                                <rect key="frame" x="14" y="302.33333333333331" width="347" height="91.666666666666686"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Rfn-Gn-I8L">
-                                        <rect key="frame" x="37" y="25.000000000000004" width="273" height="62.333333333333343"/>
+                                        <rect key="frame" x="37" y="24.999999999999996" width="273" height="42.666666666666657"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyh-RL-HhE">
-                                                <rect key="frame" x="0.0" y="0.0" width="45.666666666666664" height="62.333333333333336"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyh-RL-HhE">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.666666666666664" height="42.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Od-3V-mgA">
-                                                <rect key="frame" x="75.666666666666671" y="0.0" width="46" height="62.333333333333336"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Od-3V-mgA">
+                                                <rect key="frame" x="75.666666666666671" y="0.0" width="46" height="42.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="33"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="7" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqB-QB-glF">
-                                                <rect key="frame" x="151.66666666666666" y="0.0" width="45.666666666666657" height="62.333333333333336"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqB-QB-glF">
+                                                <rect key="frame" x="151.66666666666666" y="0.0" width="45.666666666666657" height="42.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxK-J5-p6G">
-                                                <rect key="frame" x="227.33333333333331" y="0.0" width="45.666666666666686" height="62.333333333333336"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxK-J5-p6G">
+                                                <rect key="frame" x="227.33333333333331" y="0.0" width="45.666666666666686" height="42.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1349,7 +1359,7 @@ Verification code</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s3-WE-8sL">
-                                <rect key="frame" x="109" y="691" width="157" height="57"/>
+                                <rect key="frame" x="109" y="668" width="157" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="jDr-BJ-I9a"/>
                                 </constraints>
@@ -1385,6 +1395,10 @@ Verification code</string>
                     </view>
                     <navigationItem key="navigationItem" id="zmQ-LV-sCU"/>
                     <connections>
+                        <outlet property="digit1TextField" destination="yyh-RL-HhE" id="pBt-g5-WJP"/>
+                        <outlet property="digit2TextField" destination="3Od-3V-mgA" id="6vz-xb-RJ6"/>
+                        <outlet property="digit3TextField" destination="eqB-QB-glF" id="gAE-wV-EQs"/>
+                        <outlet property="digit4TextField" destination="fxK-J5-p6G" id="J55-KD-I1M"/>
                         <outlet property="digitView" destination="6gZ-FB-GnQ" id="rfa-Sa-nS8"/>
                         <outlet property="nextButton" destination="3s3-WE-8sL" id="B2j-Uc-kcS"/>
                     </connections>
@@ -1559,7 +1573,7 @@ Verification code</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRU-7E-iuR">
                                         <rect key="frame" x="0.0" y="0.0" width="347" height="75"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="        New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-dD-ylG">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-dD-ylG">
                                                 <rect key="frame" x="0.0" y="0.0" width="347" height="75"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1592,7 +1606,7 @@ Verification code</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgY-bK-FuG">
                                         <rect key="frame" x="0.0" y="95" width="347" height="75"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="        Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idw-nb-WPB">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idw-nb-WPB">
                                                 <rect key="frame" x="0.0" y="0.0" width="347" height="75"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1671,7 +1685,7 @@ Verification code</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Rbf-Jk-eXa"/>
-        <segue reference="6ja-fp-SjG"/>
+        <segue reference="eLL-aG-X2a"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackIcon" width="45" height="45"/>

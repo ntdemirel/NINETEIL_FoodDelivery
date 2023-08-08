@@ -21,8 +21,35 @@ class SignUpViewController: UIViewController{
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    @IBOutlet var usernameTextFieldView: UIView!
+    @IBOutlet var emailTextFieldView: UIView!
+    @IBOutlet var passwordTextFieldView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usernameTextField.setPaddingPoints(60)
+        emailTextField.setPaddingPoints(60)
+        passwordTextField.setPaddingPoints(60)
+        
+        
+        
+        usernameTextFieldView.layer.shadowColor = UIColor(red: 0.353, green: 0.424, blue: 0.918, alpha: 0.07).cgColor
+        usernameTextFieldView.layer.shadowOpacity = 1
+        usernameTextFieldView.layer.shadowRadius = 50
+        usernameTextFieldView.layer.shadowOffset = CGSize(width: 12, height: 26)
+        
+        emailTextFieldView.layer.shadowColor = UIColor(red: 0.353, green: 0.424, blue: 0.918, alpha: 0.07).cgColor
+        emailTextFieldView.layer.shadowOpacity = 1
+        emailTextFieldView.layer.shadowRadius = 50
+        emailTextFieldView.layer.shadowOffset = CGSize(width: 12, height: 26)
+        
+        passwordTextFieldView.layer.shadowColor = UIColor(red: 0.353, green: 0.424, blue: 0.918, alpha: 0.07).cgColor
+        passwordTextFieldView.layer.shadowOpacity = 1
+        passwordTextFieldView.layer.shadowRadius = 50
+        passwordTextFieldView.layer.shadowOffset = CGSize(width: 12, height: 26)
+        
+        
         
         usernameTextField.layer.cornerRadius = 15
         usernameTextField.layer.borderColor = CGColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1)

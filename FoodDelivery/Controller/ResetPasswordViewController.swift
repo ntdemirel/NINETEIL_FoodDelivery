@@ -20,6 +20,9 @@ class ResetPasswordViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        newPasswordTextField.setPaddingPoints(left: 18, right: 55)
+        confirmPasswordTextField.setPaddingPoints(left:18, right: 55)
+        
         let gradientButton = GradientHelper.getGradientLayer(bounds: nextButton.bounds)
         gradientButton.cornerRadius = CGFloat(15)
         nextButton.layer.insertSublayer(gradientButton, at: 0)

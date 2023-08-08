@@ -20,6 +20,10 @@ class SignUpProcessViewController :UIViewController {
         
         BackgroundHelper.setBackground2(for: view)
         
+        firstNameTextField.setPaddingPoints(20)
+        lastNameTextField.setPaddingPoints(20)
+        mobileNumberTextField.setPaddingPoints(20)
+        
         let gradientButton = GradientHelper.getGradientLayer(bounds: nextButton.bounds)
         gradientButton.cornerRadius = CGFloat(15)
         nextButton.layer.insertSublayer(gradientButton, at: 0)
